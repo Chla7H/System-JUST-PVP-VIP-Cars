@@ -29,11 +29,11 @@ QBCore FiveM resource for `/carvip`.
 
 ## Install
 
-1. Put `justpvp_vipcars` inside your FiveM `resources` folder.
+1. Put `System-JUST-PVP-VIP-Cars` inside your FiveM `resources` folder.
 2. Add this to `server.cfg`:
 
 ```cfg
-ensure justpvp_vipcars
+ensure System-JUST-PVP-VIP-Cars
 ```
 
 3. Open `config.lua` and set:
