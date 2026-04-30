@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUST PVP VIP Cars</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="app" class="app hidden">
+        <section class="panel">
+            <header class="header">
+                <div class="brand">
+                    <img id="logo" alt="JUST PVP">
+                    <div>
+                        <p class="eyebrow">VIP Garage</p>
+                        <h1 id="serverName">JUST PVP</h1>
+                        <p id="playerInfo" class="player-info">ID: - | Discord: -</p>
+                    </div>
+                </div>
+                <button id="closeBtn" class="icon-btn" type="button" aria-label="Close">x</button>
+            </header>
+
+            <div class="stats">
+                <div>
+                    <span>Coins</span>
+                    <strong id="coins">0</strong>
+                </div>
+                <button id="boostBtn" type="button">Turbo 100</button>
+            </div>
+
+            <nav id="tabs" class="tabs hidden">
+                <button id="garageTab" class="tab active" type="button">Garage</button>
+                <button id="shopTab" class="tab" type="button">Coin Shop</button>
+                <button id="adminTab" class="tab" type="button">Admin</button>
+            </nav>
+
+            <div id="error" class="error hidden"></div>
+            <section id="garageView" class="view">
+                <div id="cars" class="cars"></div>
+            </section>
+
+            <section id="shopView" class="view hidden">
+                <div id="shop" class="shop"></div>
+            </section>
+
+            <section id="adminView" class="view hidden">
+                <div class="admin-grid">
+                    <form id="adminForm" class="admin-form">
+                        <h2>Car Editor</h2>
+                        <input id="carLabel" name="label" maxlength="64" placeholder="Car name" autocomplete="off">
+                        <input id="carModel" name="model" maxlength="64" placeholder="Spawn model" autocomplete="off">
+                        <input id="carRole" name="role" maxlength="32" placeholder="Discord role ID" autocomplete="off">
+                        <input id="carCashPrice" name="cashPrice" maxlength="12" placeholder="Cash sale price (0 = role only)" autocomplete="off">
+                        <input id="carImage" name="image" maxlength="256" placeholder="Image URL" autocomplete="off">
+                        <textarea id="carDescription" name="description" maxlength="180" placeholder="Car description"></textarea>
+                        <div class="form-actions">
+                            <button id="saveCarBtn" type="submit">Save Car</button>
+                            <button id="clearFormBtn" class="secondary" type="button">Clear</button>
+                        </div>
+                    </form>
+
+                    <form id="coinAdminForm" class="admin-form compact-form">
+                        <h2>Add Coins</h2>
+                        <input id="coinTargetId" maxlength="32" placeholder="Player ID or Discord ID" autocomplete="off">
+                        <input id="coinAmount" maxlength="8" placeholder="Coins to add" autocomplete="off">
+                        <div class="form-actions">
+                            <button type="submit">Add Coins</button>
+                        </div>
+                    </form>
+
+                    <form id="grantCarForm" class="admin-form compact-form">
+                        <h2>Give Car</h2>
+                        <input id="grantTargetId" maxlength="32" placeholder="Player ID or Discord ID" autocomplete="off">
+                        <input id="grantCarModel" maxlength="64" placeholder="Vehicle model, example: tesla" autocomplete="off">
+                        <div class="form-actions">
+                            <button type="submit">Give Car</button>
+                        </div>
+                    </form>
+
+                    <form id="vaultAdminForm" class="admin-form compact-form">
+                        <h2>VIP Vault</h2>
+                        <p id="vaultAmount" class="vault-amount">$0</p>
+                        <input id="boostCashPrice" maxlength="12" placeholder="Cash turbo price" autocomplete="off">
+                        <div class="form-actions">
+                            <button type="submit">Save Price</button>
+                            <button id="withdrawVaultBtn" class="secondary" type="button">Withdraw Vault</button>
+                        </div>
+                    </form>
+
+                    <form id="shopAdminForm" class="admin-form">
+                        <h2>Coin Shop Price</h2>
+                        <input id="shopPackageId" maxlength="32" placeholder="Package ID" autocomplete="off">
+                        <input id="shopPackageLabel" maxlength="48" placeholder="Package name" autocomplete="off">
+                        <input id="shopPackageCoins" maxlength="8" placeholder="Coins" autocomplete="off">
+                        <input id="shopPackagePrice" maxlength="12" placeholder="Game money price" autocomplete="off">
+                        <div class="form-actions">
+                            <button type="submit">Save Package</button>
+                            <button id="clearShopFormBtn" class="secondary" type="button">Clear</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
