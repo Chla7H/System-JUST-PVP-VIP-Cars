@@ -6,7 +6,7 @@ Config.DataFile = 'data/cars.json'
 
 Config.Discord = {
     GuildId = 'GuildId',
-    BotToken = 'Bot_Token',
+    BotToken = 'YOUR_BOT_TOKEN',
     RoleCacheSeconds = 3,
     DefaultRoleId = 'Default_Role_Id'
 }
