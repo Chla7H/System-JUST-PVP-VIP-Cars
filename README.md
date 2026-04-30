@@ -19,7 +19,7 @@ QBCore FiveM resource for `/carvip`.
 - Admins can put cars on sale for cash without requiring a Discord role
 - Cash from coin packs, cash turbo, and cash car sales goes into the VIP vault
 - Admins can withdraw the VIP vault from the panel
-- Role `0000000000000000000` opens cars without boost, except `Mor`
+- Role `0000000000000000000` opens cars without boost, except `CAR1`
 - Role `0000000000000000000` can open the panel for cash turbo only. VIP cars stay hidden unless the player has car roles too.
 - Dead players cannot open the VIP car menu or spawn cars
 - Spawning a new VIP car deletes the old VIP car directly
